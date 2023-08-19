@@ -7,6 +7,7 @@ Output- Min diff
 www.geeksforgeeks.org/chocolate-distribution-problem/
 */
 
+//After sorting ans will be only subsequent arrays of m size
 public long findMinDiff (ArrayList<Integer> a, int n, int m)
 {
     Collections.sort(a);                                 //For arrays use Arrays.sort() , for any collection use Collections.sort()
