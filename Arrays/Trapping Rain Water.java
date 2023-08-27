@@ -6,6 +6,10 @@ Link- https://leetcode.com/problems/trapping-rain-water/submissions/1032574635/
 public int trap(int[] arr) 
 {
     int n=arr.length;
+    if (n == 0  || n==1 || n==2) 
+    {
+        return 0;
+    }
     int []left=new int[n];
     int []right=new int[n];
 
