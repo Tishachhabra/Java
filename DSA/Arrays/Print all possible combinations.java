@@ -21,7 +21,7 @@ void combination(int arr[], int ans[], int start,int end, int index, int r)
 	}
 
 	for (int i=start; i<=end && end-i+1 >= r-index; i++)                 // replace ans[index] with all possible elements, condition : end-i+1 >= r-index
-								  										//make sure that no. of elements remaining to be traversed can make required combo
+								  	     //make sure that no. of elements remaining to be traversed can make required combo
 	{
 		ans[index] = arr[i];
 		combination(arr, ans, i+1, end, index+1, r);
