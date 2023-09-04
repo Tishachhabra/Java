@@ -1,3 +1,8 @@
+/*
+Link - https://leetcode.com/problems/valid-parentheses/
+*/
+
+//Here brackets should be opened and closed just after it
 public boolean isValid(String s) 
 {
     Stack<Character> stack = new Stack<Character>(); 
