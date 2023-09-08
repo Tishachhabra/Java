@@ -1,44 +1,26 @@
-//{ Driver Code Starts
-//Initial Template for Java
-import java.io.*;
-import java.util.*; 
-class GFG{
-    public static void main(String args[]) throws IOException { 
-        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
-        int t = Integer.parseInt(read.readLine());
-        while(t-- > 0){
-            String S = read.readLine();
-            Solution obj = new Solution();
-            System.out.println(obj.printSequence(S));
-            
-        }
-    } 
-} 
-// } Driver Code Ends
+/*
+Link :- https://www.geeksforgeeks.org/convert-sentence-equivalent-mobile-numeric-keypad-sequence/
+*/
 
-
-//User function Template for Java
-class Solution 
+//ASCII conversions
+String printSequence(String S) 
 { 
-    String printSequence(String S) 
-    { 
-        String ans="";
-        String  num[]
-            = { "2",    "22",  "222", "3",   "33", "333",
-                "4",    "44",  "444", "5",   "55", "555",
-                "6",    "66",  "666", "7",   "77", "777",
-                "7777", "8",   "88",  "888", "9",  "99",
-                "999",  "9999" };
-        for(int i=0;i<S.length();i++)
+    String ans="";
+    String  num[]
+        = { "2",    "22",  "222", "3",   "33", "333",
+            "4",    "44",  "444", "5",   "55", "555",
+            "6",    "66",  "666", "7",   "77", "777",
+            "7777", "8",   "88",  "888", "9",  "99",
+            "999",  "9999" };
+    for(int i=0;i<S.length();i++)
+    {
+        if(S.charAt(i)==' ')
+        ans+="0";
+        else
         {
-            if(S.charAt(i)==' ')
-            ans+="0";
-            else
-            {
-                int pos=S.charAt(i)-'A';
-                ans+=num[pos];
-            }
+            int pos=S.charAt(i)-'A';
+            ans+=num[pos];
         }
-        return ans;
     }
+    return ans;
 }
