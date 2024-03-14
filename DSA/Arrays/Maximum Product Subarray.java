@@ -1,15 +1,11 @@
 /*
 Link- https://leetcode.com/problems/maximum-product-subarray/submissions/
-
-Cases:-
-1) All nos. positive = whole array is ans
-2) Even number of negatives= whole array
-3) Odd number of negatives=either pref or suf is ans
-4) Array contains 0=prefix/suffix, whenever encounter 0 set pref & suf=1
 */
 
 //BruteForce approach- 2 loops - O(n^2)
-//Best - prefix & suffix by taking all above 3 cases - O(n)
+//Best - prefix & suffix O(n)
+
+//Prefix suffix varb maintain,If prefix/suffix=0, whenever encounter 0 set pref & suf=1,at every iteration ans update to max subarr product
 
 public int maximumProductSubarray(int[] nums) 
 {
