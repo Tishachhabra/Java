@@ -1,9 +1,5 @@
 /* 
-Given an arraylist arr of size N, each value represents the no. of chocolates in a packet. Each packet can have a variable number of chocolates. There are M students, the task is to distribute chocolate packets among M students such that :
-1. Each student gets exactly one packet.
-2. The difference between maximum number of chocolates given to a student and minimum number of chocolates given to a student is minimum.
-Output- Min diff
-
+Link :-
 www.geeksforgeeks.org/chocolate-distribution-problem/
 */
 
