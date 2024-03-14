@@ -27,7 +27,7 @@ public int trap(int[] arr)
     int ans=0;
     for(int i=0;i<n;i++)
     {
-        ans+=Math.min(left[i],right[i])-arr[i];
+        ans+=Math.min(left[i],right[i])-arr[i];                        //at every index water cn be filled until smallest building betwen left/ri8
     }
     return ans;
 }
