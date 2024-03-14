@@ -18,14 +18,15 @@ public void nextPermutation(int[] nums)
             break;
         }
     }
-                                                       // if there is no breaking  point 
+                                                       // if there is no breaking  point , arr is in desc order
     if(ind1==-1)
         reverse(nums,0);
     else
     {                                                           // find next greater element and swap with ind2
-        for(int i=nums.length-1;i>=0;i--)
+        for(int i=nums.length-1;i>ind1;i--)
         {
-            if(nums[i]>nums[ind1]){
+            if(nums[i]>nums[ind1])
+            {
                 ind2=i;
                 break;
             }
