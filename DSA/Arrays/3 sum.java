@@ -2,6 +2,7 @@
 Link - https://leetcode.com/problems/3sum/submissions/1029852181/
 */
 
+//sort+in 1 traversal+meet in middle for 3 sum
 //Using Set for removing duplicacy - O(nlogn)+n*m+n
 public List<List<Integer>> threeSum(int[] nums) 
 {
