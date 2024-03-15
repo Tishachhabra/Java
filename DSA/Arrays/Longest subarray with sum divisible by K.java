@@ -18,7 +18,7 @@ int longSubarrWthSumDivByK(int arr[], int n, int k)
         if (mod_arr[i] == 0)
             max_len = i + 1;
 
-        else if (map.containsKey(mod_arr[i]) == false)                       //if mod value hasnt come yet
+        else if (map.containsKey(mod_arr[i]) == false)                       //if mod value hasnt come yet, will store only frst occurence to make longer subarr
             map.put(mod_arr[i], i);
 
         else
