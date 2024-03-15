@@ -4,7 +4,7 @@ Link - https://leetcode.com/problems/combinations/solutions/3845227/2-methods-ba
 arr[] ---> Input Array
 ans[] ---> Temporary array to store current combination
 start & end ---> Starting and Ending indexes in arr[]
-index ---> Current index in ans[]
+index ---> Current index in ans[] (1-indexing)
 r ---> Size of a combination to be printed 
 */
 
