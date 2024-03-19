@@ -2,14 +2,15 @@
 Link - https://leetcode.com/problems/palindromic-substrings/description/
 */
 
-//  Create dp matrix of string characters, right upper triangle cells consists of all substrings,check palindrome by first and letter letter equality
+//  Create dp matrix of string characters, right upper triangle cells consists of all substrings,check palindrome by first and letter letter equality - O(n^2) 
+//No better approach than this
 public int countSubstrings(String s) 
 {
   int count=0;
   boolean dp[][]=new boolean[s.length()][s.length()];                       //By default, all cells false
-  for(int g=0;g<s.length();g++)
+  for(int g=0;g<s.length();g++)                                            //going in dp by diagonals,g=0 first diagonal 0
   {
-      for(int i=0,j=g;j<dp.length;i++,j++)
+      for(int i=0,j=g;j<dp.length;i++,j++)                                  //i is row,j is column=diag number
       {
           if(g==0)
           {
