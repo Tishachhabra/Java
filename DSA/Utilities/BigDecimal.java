@@ -1,4 +1,4 @@
-import java.math.BigDecimal;
+import java.math.BigDecimal;                        //BigDecimal provides arbitrary-precision arithmetic calc
 import java.util.*;
 
 class Solution {
