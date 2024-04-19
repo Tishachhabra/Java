@@ -6,7 +6,7 @@ Link - https://practice.geeksforgeeks.org/problems/longest-subarray-with-sum-div
 int longSubarrWthSumDivByK(int arr[], int n, int k)
 {
     HashMap<Integer, Integer> map= new HashMap<Integer, Integer>();               //store frst occurrences of mods
-    int mod_arr[] = new int[n];                                                  //store (arr[0]....arr[i]) % k
+    int mod_arr[] = new int[n];                                                  //store (arr[0]....arr[i]) % k , isi se subarrays decide
     int max_len = 0;
     int curr_sum = 0;
     
