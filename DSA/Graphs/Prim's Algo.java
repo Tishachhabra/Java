@@ -2,6 +2,7 @@
 Link - https://www.geeksforgeeks.org/problems/minimum-spanning-tree/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article
 
 Approach- Using priority queue , O(E log V)
+
 Maintain ans smthing(arraylist/sum of weights), inMSTnodes[],keys(represent smallest weight) of all vertices,priority que to maintain edges(vertex, weight ka pair)
 */
 
