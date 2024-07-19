@@ -1,7 +1,3 @@
-/*
-Link - https://leetcode.com/problems/maximum-subarray/
-*/
-
 //Kadane algo - maintain max_sum_sofar & cur_sum & - O(n) 
 public int maxSubArray(int[] nums) 
 {
