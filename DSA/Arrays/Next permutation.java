@@ -9,7 +9,7 @@ public void nextPermutation(int[] nums)
 {
     int ind1=-1;
     int ind2=-1;
-                                                       // step 1 find breaking point 
+                                                       // step 1 find breaking point (which breaks desc order) 
     for(int i=nums.length-2;i>=0;i--)
     {
         if(nums[i]<nums[i+1])
