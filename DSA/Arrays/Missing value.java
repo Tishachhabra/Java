@@ -7,7 +7,7 @@ Corner cases - nums is [0,2] | ans=1 , nums is [1,2] | ans=0
 public int missingNumber(int[] nums) 
 {
     int len = nums.length;
-    int sum = (0+len)*(len+1)/2;
+    int sum = (len)*(len+1)/2;            // Sum of first n natural nos
     for(int i=0; i<len; i++)
     {
         sum-=nums[i];
