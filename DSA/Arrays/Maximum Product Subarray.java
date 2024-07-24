@@ -23,7 +23,8 @@ public int maximumProductSubarray(int[] nums)
         pref*=nums[i];
         suf*=nums[n-i-1];
         
-        ans=Math.max(ans,Math.max(pref,suf));                        //import java.math.*
+        ans=Math.max(ans,Math.max(pref,suf));                        
+        
     }
     return ans;
 }
