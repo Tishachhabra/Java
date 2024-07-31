@@ -1,3 +1,4 @@
+//Reverse engineering
 // Best O(n) - 1 loop traversal. At every index i calc prefixsum & check if prefixsum==k (potential ans). See remaining subarray (prefixsum-k) exists in map+then bich ki subarray is potential ans. Then map me add curr prefixsum only when it is not there.
 
 public static int lenOfLongSubarr (int a[], int n, int k) 
