@@ -8,16 +8,17 @@ public int countSubstrings(String s)
 {
   int count=0;
   boolean dp[][]=new boolean[s.length()][s.length()];                       //By default, all cells false
-  for(int g=0;g<s.length();g++)                                            //going in dp by diagonals,g=0 first diagonal 0
+  for(int length=1;length<=s.length();length++)                                            //going in dp by diagonals,g=0 first diagonal 0
   {
-      for(int i=0,j=g;j<dp.length;i++,j++)                                  //i is row,j is column=diag number
+      for(int i=0,j=length-1;j<dp.length;i++,j++)                                  //i is row,j is column=diag number
       {
-          if(g==0)
+          if(length==1)
+            
           {
               dp[i][j]=true;                                              //all single letter cells true
               count++;
           }
-          else if(g==1)
+          else if(length==2)
           {
               if(s.charAt(i)==s.charAt(j))
               {
