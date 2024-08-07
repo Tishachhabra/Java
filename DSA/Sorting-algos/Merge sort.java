@@ -1,52 +1,56 @@
 
-public class Main
+
+class Solution
 {
-    static int [] mergesort(int [] arr,int low,int high)
+    void merge(int arr[], int l, int mid, int r)
     {
-        if(low==high)
+        int n1=mid-l+1;
+        int n2=r-mid;
+        int left[]=new int[n1];
+        int right[]=new int [n2];
+        
+        for(int i=0;i<n1;i++)
         {
-            int []base=new int [1];
-            base[0]=arr[low];
-            return base;
+            left[i]=arr[l+i];
         }
-        int mid=(low+high)/2;
-        int a[]=mergesort(arr,low,mid);
-        int b[]=mergesort(arr,mid+1,high);
-        int []ans=merge(a,b);
-        return ans;
+        for(int i=0;i<n2;i++)
+        {
+            right[i]=arr[mid+1+i];
+        }
+        int k=l,i=0,j=0;
+        while(i<n1 && j<n2)
+        {
+            if(left[i]<right[j])
+            {
+                arr[k]=left[i];
+                i++;
+            }
+            else
+            {
+                arr[k]=right[j];
+                j++;
+            }
+            k++;
+        }
+        while(i<n1)
+        {
+            arr[k]=left[i];
+            i++;
+            k++;
+        }
+        while(j<n2)
+        {
+            arr[k]=right[j];
+            j++;
+            k++;
+        }
     }
-    static int[] merge(int []a,int []b)
+    void mergeSort(int arr[], int l, int r)
     {
-        int i,j,k;
-        int []res=new int[a.length+b.length];
-        for( i=0,j=0,k=0;i<a.length && j<b.length ;k++)
-        {
-                if(a[i]<b[j])
-                {
-                    res[k]=a[i];
-                    i++;
-                }
-                else
-                {
-                    res[k]=b[j];
-                    j++;
-                }
-        }
-         while (i < a.length)
-            res[k++] = a[i++];
-         while (j < b.length)
-            res[k++] = b[j++];
-        return res;
+        if(l>=r)
+        return;
+       int mid=l + (r - l) / 2;
+       mergeSort(arr,l,mid); mergeSort(arr,mid+1,r);
+       merge(arr,l,mid,r);							//in place sort
     }
-	public static void main(String[] args) 
-	{
-		int []arr={2,7,3,10,9,50,37,11,0};
-		int []res=mergesort(arr,0,arr.length-1);
-		for(int i:res)
-		{
-		    System.out.print(i+ ",");
-		}
-	}
 }
-
-
