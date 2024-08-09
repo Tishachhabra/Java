@@ -8,7 +8,7 @@ public int countSubstrings(String s)
 {
   int count=0;
   boolean dp[][]=new boolean[s.length()][s.length()];                       //By default, all cells false
-  for(int length=1;length<=s.length();length++)                                            //going in dp by diagonals,g=0 first diagonal 0
+  for(int length=1;length<=s.length();length++)                                            //going in dp by diagonals,taking length of substrings
   {
       for(int i=0,j=length-1;j<dp.length;i++,j++)                                  //i is row,j is column=diag number
       {
