@@ -18,31 +18,31 @@ int lps(String s)
 }
 
 //Best approach
-//longest prefix suffix array - O(n)
+//pi table of kmp making - O(n)
 int lps(String s) 
 {
     int n = s.length();
-    int[] lps = new int[n];
+    int[] lps = new int[n];                            //length of lps found uptil i index
     int i = 0, j =1;
     lps[0] = 0;
-    while(j <n)
+    while(j <n)                                        //j se traverse i ko as a pattern
     {
       if(s.charAt(i) == s.charAt(j))
       {
-          lps[j] = i + 1 ;
+          lps[j] = i + 1 ;                            
           i++;
           j++;
       }
       else
       {
-        if(i == 0)
+        if(i == 0)                                     //hasnt matched yet
         {
           lps[j] = 0;
           j++;
         }
         else
         {
-          i = lps[i-1];
+          i = lps[i-1];                               
         }
       }
     }
