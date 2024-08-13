@@ -1,3 +1,5 @@
+// 1) Sort by converting to ArrayList then Collections.sort()        --- O (nlogn)
+// 2) Count then fill - O(2n)
 public static Node sortList(Node head) 
     {
         int zero=0,one=0,two=0;
@@ -33,3 +35,5 @@ public static Node sortList(Node head)
         }
     return head;
     }
+
+// Best - maintain 3 pointers to manage 3 linkedlists then join by using dummy nodes.
