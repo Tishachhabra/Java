@@ -2,7 +2,7 @@
 Link- https://practice.geeksforgeeks.org/problems/multiply-two-linked-lists/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article 
 */
 
-//
+// Mod necessary cuz product large aega 
 public long multiplyTwoLists(Node l1,Node l2)
    {
        Node node1=l1;
