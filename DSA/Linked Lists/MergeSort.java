@@ -11,7 +11,7 @@ class Solution
         
         Node middle=split(head);
         Node nextofmiddle=middle.next;
-        middle.next=null;
+        middle.next=null;                                                //break halves
         Node left=mergeSort(head);
         Node right=mergeSort(nextofmiddle);
         head=merge(left,right);
@@ -36,7 +36,6 @@ class Solution
         if(right==null)
         return left;
         Node result=null;
-        Node head;
         
         if(left.data<=right.data)
         {
