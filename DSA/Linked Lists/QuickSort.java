@@ -18,17 +18,14 @@ class GfG
     }
     public static void sort(Node head,Node tail)
     {
-        if(head==tail || head==null || head==tail.next)
+        if(head==tail || head==null)
         return;
         Node pivot=partition(head,tail);
         sort(head,pivot);
         sort(pivot.next,tail);
     }
     public static Node partition(Node head,Node tail)
-    {
-        if(head==tail || head==null || tail==null)
-        return head;
-        
+    {   
         Node pivot=head;
         Node prev=head;
         Node cur=head.next;
@@ -43,10 +40,9 @@ class GfG
             }
             cur=cur.next;
         }
-        int temp=prev.data;
+        int temp=prev.data;                        //swap pivot with prev
         prev.data=pivot.data;
         pivot.data=temp;
         return prev;
-        
     }
 }
