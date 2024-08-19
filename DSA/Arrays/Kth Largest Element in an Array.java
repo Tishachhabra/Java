@@ -1,4 +1,7 @@
-// Use priority queue as max heap +with custom comparator + add all elements + remove (k-1) elements then by peek() =answer
+//Sort + extract - O(nlogn)
+
+// Use priority queue as max heap +with custom comparator + add all elements + remove (k-1) elements then by peek() =answer 
+// - O(n+(k-1)logn)
 
     public static int findKthLargest(int[] nums, int k) 
   {
