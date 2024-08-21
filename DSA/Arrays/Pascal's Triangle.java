@@ -19,7 +19,6 @@ public static long nCr(int r, int c)
 
 class Solution 
 {
-    static long mod=1000000007;
     ArrayList<Long> RowOfPascalTriangle(int r) 
     {
         ArrayList<Long> line=new ArrayList<>();
@@ -27,8 +26,8 @@ class Solution
         long ans=1;
         for(int i=1;i<r;i++)                              // sare columns se 1 kam chlega bcoz 1 has been added
         {
-            ans=(ans* (r-i))%mod;
-            ans = (ans * i); 
+            ans*= (r-i);
+            ans/=i; 
             line.add(ans);
         }
         return line;
