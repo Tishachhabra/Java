@@ -9,10 +9,10 @@ public void sortColors(int[] nums) {
         int high = nums.length-1;
         int temp;
 
-        while(mid <= high){
+        while(mid <= high){                                // = necessaryu bcoz maybe 2 is in [mid-high] then it has to be placed in right position
             if(nums[mid] == 0){
                 temp = nums[mid];
-                nums[mid++] = nums[low];
+                nums[mid++] = nums[low];                       // mid bhi inc bcoz replace krke 1 hi aega that is also settled on mid
                 nums[low++] = temp;
             }else if(nums[mid] == 1){
                 mid++;
