@@ -14,7 +14,7 @@ public class Solution
                 return mid;
 
           //either mid is in real array or in rotated one
-            if (nums[low] <= nums[mid])                                //real array
+            if (nums[low] <= nums[mid])                                //rotated array
             {
                 if (nums[low] <= target && target <= nums[mid])        //target is in left section section , checking target boundaries
                     high = mid - 1;
@@ -22,7 +22,7 @@ public class Solution
                     low = mid + 1;
             } else 
             {
-                if (nums[mid] <= target && target <= nums[high])      //in roated 
+                if (nums[mid] <= target && target <= nums[high])      //in real 
                     low = mid + 1;
                 else
                     high = mid - 1;
