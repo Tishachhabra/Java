@@ -2,7 +2,7 @@
 Link- https://leetcode.com/problems/maximum-product-subarray/submissions/
 */
 
-//BruteForce approach- 2 loops - O(n^2)
+//BruteForce approach- 2 loops - of finding all subarrays - O(n^2)
 //Best - prefix & suffix O(n)
 
 //Prefix suffix varb maintain,If prefix/suffix=0, whenever encounter 0 set pref & suf=1,at every iteration ans update to max subarr product
