@@ -1,7 +1,3 @@
-/*
-Link - https://leetcode.com/problems/merge-two-sorted-lists/submissions/1073435160/
-*/
-
 //By recursion
 public ListNode mergeTwoLists(ListNode list1, ListNode list2) 
 {
