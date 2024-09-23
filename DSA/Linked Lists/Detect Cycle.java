@@ -33,7 +33,7 @@ public boolean hasCycle(ListNode head)
     {
         slow=slow.next;
         fast=fast.next.next;
-        if(slow==fast && slow!=null)
+        if(slow==fast)
         return true;
     }
     return false;
