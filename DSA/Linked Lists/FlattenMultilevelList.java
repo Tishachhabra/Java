@@ -1,7 +1,3 @@
-/*
-Link - https://www.codingninjas.com/studio/problems/flatten-the-multi-level-linked-list_839810?leftPanelTabValue=SOLUTION
-*/
-
 //Traverse and save child nodes in arraylist,when reach tail attach child node from arraylist - O(n), Space - O(n)
 public static Node flattenMultiLinkedList(Node head) 
 {
@@ -25,21 +21,19 @@ public static Node flattenMultiLinkedList(Node head)
 public static Node flattenMultiLinkedList(Node head) 
 {
   Node cur=head;
-  Node tail=cur;
+  Node tail=head;
   while(tail.next!=null)
-  {	tail=tail.next;	}
+  	tail=tail.next;	
 
-  while(cur!=null)
+  while(cur!=null)			//MAIN LOOP
   {
-    if(cur.child!=null)
+    if(cur.child!=null)			//child found
     {
       tail.next=cur.child;
-      Node tmp=cur.child;
-      while(tmp.next!=null)
-      {
-        tmp=tmp.next;
-      }
-      tail=tmp;
+      tail=tail.next;
+      while(tail.next!=null)
+        tail=tail.next;
+      
     }
     cur=cur.next;
   }
