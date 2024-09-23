@@ -1,5 +1,5 @@
 // 1) Sort by converting to ArrayList then Collections.sort()        --- O (nlogn)
-// 2) Count then fill - O(2n)
+// 2) Count then fill - O(n)
 public static Node sortList(Node head) 
     {
         int zero=0,one=0,two=0;
