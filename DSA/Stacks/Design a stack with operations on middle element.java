@@ -1,11 +1,5 @@
 //By doubly Linked list
 
-class DLLNode {
-    DLLNode prev;
-    int data;
-    DLLNode next;
-    DLLNode(int data) { this.data = data; }
-}
 public class myStack 
 {
     DLLNode head;
