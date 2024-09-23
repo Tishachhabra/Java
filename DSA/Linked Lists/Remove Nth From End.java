@@ -1,6 +1,3 @@
-/*
-Link - https://leetcode.com/problems/remove-nth-node-from-end-of-list/
-*/
 
 //slow and fast pointer will be kept at dist of n , when fast reaches null,slow must hve reached node to be deleted
 public ListNode removeNthFromEnd(ListNode head, int n) 
