@@ -15,7 +15,7 @@ class Solution
     static int partition(int arr[], int low, int high)
     {
         int pivot=low;                      //pivot=first ele
-        int i=low,j=high;
+        int i=low+1,j=high;
         while(i<j)
         {
             while(arr[i]<=arr[pivot] && i<=high-1)
