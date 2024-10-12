@@ -18,5 +18,5 @@ public int[][] overlappedInterval(int[][] Intervals)
             Intervals[prev] = Intervals[i];                                //can be directly submitted
         }
     }
-    return Arrays.copyOf(intervals, prev + 1); // Copy only the relevant portion
+    return Arrays.copyOf(intervals, prev + 1); // Copy only the relevant portion    //(prev+1) since 1-indexed length 
 }
