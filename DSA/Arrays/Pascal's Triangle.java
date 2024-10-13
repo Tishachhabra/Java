@@ -7,10 +7,11 @@ Use shortcut to calc combo ; run until denominator is 1. -- O(n
 public static long nCr(int r, int c) 
 {
     long res = 1;
-    for (int col = 0; col < c; col++)           // will go from 0 to c-1 bcoz in dividing we need smaller first to get right ans
-    {            
-        res = res * (r - col);
-        res = res / (col + 1);
+    while (c > 0) {
+        res *= r;
+        res /= c;
+        r--;
+        c--;
     }
     return res;
 }
