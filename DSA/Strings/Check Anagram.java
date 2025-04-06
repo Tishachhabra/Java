@@ -1,7 +1,3 @@
-/* 
-Link :- https://leetcode.com/problems/valid-anagram
-*/
-
 //Bruteforce : HashMaps for char and counts
 public boolean isAnagram(String s, String t) 
 {
@@ -12,28 +8,13 @@ public boolean isAnagram(String s, String t)
   
       for(int i=0;i<s.length();i++)
       {
-          if(!map.containsKey(s.charAt(i)))
-          map.put(s.charAt(i),1);
-          else
-          {
-          int count=map.get(s.charAt(i));
-          map.put(s.charAt(i),++count);
-          }
-
-          if(!map1.containsKey(t.charAt(i)))
-          map1.put(t.charAt(i),1);
-          else
-          {
-          int count=map1.get(t.charAt(i));
-          map1.put(t.charAt(i),++count);
-          }
+          map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
+            map1.put(t.charAt(i), map1.getOrDefault(t.charAt(i), 0) + 1);
       }
-      if (map.equals(map1))
-      return true;
-      return false;
+      return map.equals(map1));
 }
 
-//Better : Use Auxiliary arrays with indices as alphabets
+//Better : Use 2 Aux arrays with indices as alphabets
 
 public boolean isAnagram(String s, String t) 
 {
@@ -50,10 +31,26 @@ public boolean isAnagram(String s, String t)
     
     for(int i = 0; i < 26; i++)
     {
-        if(sArray[i] !=  tArray[i] )
+        if(sArray[i] !=  tArray[i] )            //check if both array frequencies same
         {
             return false;
         }
     }
     return true;
 }
+
+//Best : 1 Aux array of 26 first increase by s then decraese by t , in end all cells must be 0
+public boolean isAnagram(String s, String t) 
+{
+    if (s.length() != t.length()) return false;
+int[] count = new int[26];
+for (int i = 0; i < s.length(); i++) {
+    count[s.charAt(i) - 'a']++;
+    count[t.charAt(i) - 'a']--;
+}
+for (int val : count)
+    if (val != 0) 
+      return false;
+return true;
+}
+
