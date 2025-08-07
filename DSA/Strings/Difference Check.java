@@ -1,5 +1,5 @@
 // Convert all times to seconds, check diff & wrap around diff
-
+// https://www.geeksforgeeks.org/problems/difference-check/1
 //Bruteforce (n^2): Convert all to standard seconds format > nested loop compare all pairs with minDiff(ans) > check diff and wrap around diff (86400-diff)
 public class MinTimeDifference {
 
