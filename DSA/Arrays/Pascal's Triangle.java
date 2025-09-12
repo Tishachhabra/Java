@@ -20,15 +20,15 @@ public static long nCr(int r, int c)
 
 class Solution 
 {
-    ArrayList<Long> RowOfPascalTriangle(int r) 
+    ArrayList<Long> RowOfPascalTriangle(int r) 				// r is 0-indexed
     {
         ArrayList<Long> line=new ArrayList<>();
         line.add(1L);
         long ans=1;
-        for(int i=1;i<r;i++)                              // sare columns se 1 kam chlega bcoz 1 has been added
+        for(int c=1;c<r=;c++)                              // sare columns se 1 kam chlega bcoz 1 has been added
         {
-            ans*= (r-i);
-            ans/=i; 
+            ans*= (r-c+1);
+            ans/=c; 
             line.add(ans);
         }
         return line;
